@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": [
+      "google",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended"
+  ],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "rules": {
+    "max-len": ["error", { "code": 1200 }],
+    "arrow-parens": [2, "as-needed"],
+    "indent": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
