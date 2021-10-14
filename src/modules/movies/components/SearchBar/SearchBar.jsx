@@ -23,8 +23,8 @@ const SearchBar = () => {
 
   return (
     <Component.Container id="search-bar">
-      <input
-        placeholder="search"
+      <Component.TextInput
+        placeholder="Search for a movie..."
         value={value}
         onChange={e => setValue(e.target.value)}
       />

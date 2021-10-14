@@ -9,7 +9,7 @@ const Rating = () => {
   const buttons = ['one', 'two', 'three', 'four', 'five'];
 
   const handleClick = value => {
-    const newRating = value === rating ? null : value;
+    const newRating = value !== rating ? value : null;
     setRating(newRating);
     setMaxValue(newRating ? STARS[value].max : null);
   };

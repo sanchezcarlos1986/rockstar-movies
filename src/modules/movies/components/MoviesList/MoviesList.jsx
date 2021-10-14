@@ -7,8 +7,8 @@ import {STARS} from '../../constants/variables';
 import {MoviesList as Component} from './MoviesList.styles';
 
 const MoviesList = () => {
-  const {movies} = useFetchMovies({category: 'movie/popular'});
-  const {rating, searchResult} = useContext(MoviesContext);
+  const {movies, isLoading} = useFetchMovies({category: 'movie/popular'});
+  const {rating, searchResult, setShowForm} = useContext(MoviesContext);
 
   const moviesToRender = isArrayWithData(searchResult)
     ? searchResult
@@ -22,17 +22,20 @@ const MoviesList = () => {
       })
     : moviesToRender;
 
-  return (
-    <section id="movies-list">
-      <h1>Popular Movies</h1>
-      <h2>Rating: {rating}</h2>
+  if (isLoading) return <p>loading...</p>;
+  if (filteredMovies && !filteredMovies.length) return <p>No results</p>;
 
-      <Component.Container id="movies-list">
+  if (filteredMovies && filteredMovies.length) setShowForm(true);
+
+  return (
+    <Component.Container id="movies-list">
+      <h1>{`What's Popular`}</h1>
+      <Component.List>
         {filteredMovies
           ? filteredMovies.map(movie => <Movie key={movie.id} movie={movie} />)
           : null}
-      </Component.Container>
-    </section>
+      </Component.List>
+    </Component.Container>
   );
 };
 

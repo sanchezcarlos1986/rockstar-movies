@@ -3,6 +3,7 @@ import {tmdbURL} from '../constants/variables';
 
 export const useFetchMovies = ({category, query, shouldSearch = true}) => {
   const [movies, setMovies] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const url = tmdbURL({category: category, query: query});
 
@@ -11,6 +12,8 @@ export const useFetchMovies = ({category, query, shouldSearch = true}) => {
       fetch(url)
         .then(response => response.json())
         .then(data => {
+          setIsLoading(false);
+
           if (data.errors) {
             setMovies([]);
           } else {
@@ -22,7 +25,7 @@ export const useFetchMovies = ({category, query, shouldSearch = true}) => {
     }
   }, [query]);
 
-  return {movies};
+  return {movies, isLoading};
 };
 
 export default useFetchMovies;

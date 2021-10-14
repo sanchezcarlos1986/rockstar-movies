@@ -8,6 +8,12 @@ const Container = styled.ul`
     border: 0;
     cursor: pointer;
 
+    span {
+      color: white;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+
     &:hover {
       span {
         color: #d9502c;

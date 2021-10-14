@@ -6,12 +6,15 @@ const MoviesContext = createContext();
 const MoviesContextProvider = ({children}) => {
   const [searchResult, setSearchResult] = useState('');
   const [rating, setRating] = useState(null);
+  const [showForm, setShowForm] = useState(true);
 
   const value = {
     searchResult,
     setSearchResult,
     rating,
     setRating,
+    showForm,
+    setShowForm,
   };
 
   return (
