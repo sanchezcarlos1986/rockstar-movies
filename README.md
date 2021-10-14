@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+## Rockstar Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome!
 
-## Available Scripts
+### Instalación
 
-In the project directory, you can run:
+To install dependencies for this project once you have cloned the repository, please run the command `npm install`.
 
-### `yarn start`
+After installing the dependencies, please run `npm start` to launch the app locally in port `3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Descripción
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The project has only 2 views: `Movies List` and `Movie Detail`.
+The following list show us the general features of the project:
 
-### `yarn test`
+- It was created using `create-react-app`
+- Routes were created using `react-router-dom`.
+- To store global values in the project, `React Context` was used.
+- The css styles were created using `Styled Components`.
+- For HTTP Requests, `native JS Fetch` was used.
+- Custom hook `useFetchMovies` was created to handle HTTP requests to `tmdb` API.
+- Util `dateFormatter` was created as the name suggests, to format date in a custom way.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+### Componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All components were created as **functional components**, and used React hooks as useEffect or useState to handle or store data when is needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The following components list show us a description of each one:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Component       | Description                                                                                                                                                                       |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Header**      | Include the app logo with a link to the main page, and the SearchBar and Rating components. Those components will be hidden in the Movie Detail page.                             |
+| **MoviesList**  | Works as the main page of the app. Also get popular movies list or filtered list when a query is typed by the user in SearchBar                                                   |
+| **Movie**       | Represents each movie item in the MoviesList                                                                                                                                      |
+| **MovieDetail** | The page that shows the movie detail when a Movie item is clicked. Has a button to go back to the list.                                                                           |
+| **SearchBar**   | Allows us to make a query to the `tmdb` API. Initial popular movies will be replaced with the results. If the input text is empty, popular movies will be listed again.           |
+| **Rating**      | A movie list filter based on `vote_average` of each movie. Filter range works like this: ⭐️ [0, 2], ⭐️⭐️ [2, 4], ⭐️⭐️⭐️ [4, 6], ⭐️⭐️⭐️⭐️ [6,8], ⭐️⭐️⭐️⭐️⭐️ [8, 10] |
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for reading this document.
