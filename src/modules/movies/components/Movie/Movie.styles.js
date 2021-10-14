@@ -4,6 +4,10 @@ const Container = styled.div`
   transition: transform 0.2s;
   font-size: 14px;
 
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+
   &:hover {
     transform: translate(0, 3px);
 

@@ -11,7 +11,8 @@ const Container = styled.div`
 const List = styled.ul`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   list-style: none;
   padding: 1rem 0;
 `;

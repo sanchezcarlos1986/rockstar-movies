@@ -5,6 +5,13 @@ const Container = styled.div`
   padding-top: 50vh;
   position: relative;
 
+  @media screen and (max-width: 480px) {
+    background-position: top;
+    background-repeat: initial;
+    background-size: contain;
+    padding-top: 210px;
+  }
+
   a {
     background: white;
     border-radius: 10px;
@@ -26,6 +33,10 @@ const Container = styled.div`
 const TitleContainer = styled.div`
   align-items: center;
   display: flex;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
 `;
 
 const Info = styled.div`
@@ -33,8 +44,12 @@ const Info = styled.div`
   display: flex;
   padding: 2rem 10%;
   text-align: left;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+
   > div {
-    margin-left: 20px;
   }
   img {
     position: relative;
@@ -42,13 +57,32 @@ const Info = styled.div`
   }
 `;
 
+const Details = styled.div`
+  margin-top: -3rem;
+
+  @media screen and (min-width: 480px) {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+`;
+
 const Rate = styled.div`
+  align-items: center;
   background: black;
   border-radius: 50%;
   border: 3px solid #01b4e4;
   color: white;
+  display: flex;
+  flex-shrink: 0;
+  height: 44px;
+  justify-content: center;
   margin-left: 1rem;
-  padding: 10px;
+  width: 44px;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
 `;
 
 const Date = styled.span`
@@ -58,6 +92,7 @@ const Date = styled.span`
 export const MovieDetail = {
   Container,
   TitleContainer,
+  Details,
   Info,
   Rate,
   Date,

@@ -36,7 +36,7 @@ const MovieDetail = ({match}) => {
               title={movie.title}
             />
           </Overdrive>
-          <div>
+          <Component.Details>
             <Component.TitleContainer>
               <h1>{movie.title}</h1>
               <Component.Rate>{movie.vote_average}</Component.Rate>
@@ -44,7 +44,7 @@ const MovieDetail = ({match}) => {
             <Component.Date>{dateFormatter(movie.release_date)}</Component.Date>
 
             <p>{movie.overview}</p>
-          </div>
+          </Component.Details>
         </Component.Info>
       </Component.Container>
     </div>
