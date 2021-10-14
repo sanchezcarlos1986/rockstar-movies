@@ -7,7 +7,7 @@ import {POSTER_PATH} from '../../constants/variables';
 
 const Movie = ({movie}) => {
   return (
-    <div id={`movie-${movie.id}`}>
+    <Component.Container id={`movie-${movie.id}`}>
       <Link to={`/movie/${movie.id}`}>
         <h3>{movie.title}</h3>
         <Overdrive id={movie.id.toString()}>
@@ -17,7 +17,7 @@ const Movie = ({movie}) => {
           />
         </Overdrive>
       </Link>
-    </div>
+    </Component.Container>
   );
 };
 

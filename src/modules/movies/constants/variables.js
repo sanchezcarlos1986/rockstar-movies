@@ -6,3 +6,11 @@ export const BASE_URL = `https://api.themoviedb.org/3`;
 
 export const tmdbURL = ({category, query = ''}) =>
   encodeURI(`${BASE_URL}/${category}?api_key=${API_KEY}&query=${query}`);
+
+export const STARS = {
+  one: {min: 0, max: 2},
+  two: {min: 2, max: 4},
+  three: {min: 4, max: 6},
+  four: {min: 6, max: 8},
+  five: {min: 8, max: 10},
+};
