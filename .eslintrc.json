@@ -22,6 +22,7 @@
     "arrow-parens": [2, "as-needed"],
     "indent": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "operator-linebreak": "off"
   }
 }
